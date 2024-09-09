@@ -10,7 +10,7 @@
         <form method="post">
         Username: <input type="username" name="username"><br><br>
         Password: <input type="password" name="password"><br><br>
-        <pre>${errorMessage}<pre55``
+        <pre>${errorMessage}</pre>
         <input type="submit" class="btn btn-success">
         </form>
       </div>

@@ -2,14 +2,14 @@ package com.praveen.todoApp.todo;
 
 import jakarta.validation.constraints.Size;
 
-public class todo {
+public class Todo {
     private int id;
     private String username;
     @Size(min=10, message = "Please enter the min 10 characters")
     private String course;
     private boolean done;
 
-    public todo(int id, String username, String course,boolean done) {
+    public Todo(int id, String username, String course, boolean done) {
         this.id = id;
         this.course = course;
         this.username = username;
@@ -51,7 +51,7 @@ public class todo {
 
     @Override
     public String toString() {
-        return "todo{" +
+        return "Todo{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", course='" + course + '\'' +

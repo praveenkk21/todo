@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.praveen</groupId>
-	<artifactId>todo</artifactId>
+	<artifactId>Todo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>todo</name>
+	<name>Todo</name>
 	<description>ToDo project with Spring Boot</description>
 	<url/>
 	<licenses>

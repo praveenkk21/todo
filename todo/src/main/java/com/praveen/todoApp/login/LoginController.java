@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
 @SessionAttributes("username")
-public class loginController {
+public class LoginController {
 
     @Autowired
-    private authenticationService authenticationService;
+    private AuthenticationService authenticationService;
 
     @RequestMapping(value="login",method=RequestMethod.GET)
     public String loginPageEnter(){

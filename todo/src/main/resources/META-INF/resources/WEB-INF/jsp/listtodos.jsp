@@ -20,19 +20,28 @@
                 <th>Name</th>
                 <th>Course</th>
                 <th>Is Done?</th>
+                <th>Update</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
-            <c:forEach items="${todo}" var="todo">
+            <c:forEach items="${Todo}" var="Todo">
             <tr>
-                <td>${todo.id}</td>
-                <td>${todo.username}</td>
-                <td>${todo.course}</td>
-                <td>${todo.done}</td>
+                <td>${Todo.id}</td>
+                <td>${Todo.username}</td>
+                <td>${Todo.course}</td>
+                <td>${Todo.done}</td>
+                <td>
+                    <a href="update-todo?id=${Todo.id}" class="btn btn-success">Update</a>
+                </td>
+                <td>
+                    <a href="delete-todo?id=${Todo.id}" class="btn btn-warning">Delete</a>
+                </td>
             </tr>
             </c:forEach>
          </tbody>
         </table>
+        <pre>${EmptyMessage}</pre>
          <a href="add-todo" class="btn btn-success">Add ToDo</a>
       </div>
          <script src="webjars/jquery/3.6.0/jquery.min.js"></script>

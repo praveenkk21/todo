@@ -11,8 +11,8 @@
         <div>
             <h1>Enter the ToDo</h1>
         </div>
-            <form:form method="post" modelAttribute="todo">
-                Course: <form:input type="text" path="course" required="required"/>
+            <form:form method="post" modelAttribute="Todo">
+                Course: <form:input path="course" required="required"/>
                 <form:errors path="course" cssClass="text-warning"/>
                 <form:input path="id" type="hidden"/>
                 <form:input path="done" type="hidden"/><br><br>
