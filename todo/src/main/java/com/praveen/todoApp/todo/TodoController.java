@@ -8,6 +8,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Controller
@@ -29,7 +30,7 @@ public class TodoController {
 
     @RequestMapping(value="add-todo",method = RequestMethod.GET)
     public String addToDos( Model map) {
-        Todo todo1=new Todo(0,(String)map.getAttribute("username"),"D",false);
+        Todo todo1=new Todo(0,(String)map.getAttribute("username"),"D", LocalDate.now(),false);
         map.addAttribute("Todo",todo1);
         return "addtodo";
     }
@@ -39,7 +40,7 @@ public class TodoController {
         if(result.hasErrors()){
             return "addtodo";
         }
-            todoService.addToDo((String) map.getAttribute("username"), todo2.getcourse(), false);
+            todoService.addToDo((String) map.getAttribute("username"), todo2.getcourse(),todo2.getDate(), false);
             return "redirect:list-todos";
     }
 
