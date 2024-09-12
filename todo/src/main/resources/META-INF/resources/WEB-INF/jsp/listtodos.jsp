@@ -48,11 +48,18 @@
          </tbody>
         </table>
         <pre>${EmptyMessage}</pre>
-         <a href="add-todo" class="btn btn-success mr-3">Add ToDo</a>
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
-            <label class="form-check-label" for="defaultCheck1">
-              Add with Logged User
-            </label>
+
+         <!-- Form for adding new ToDos -->
+                     <form action="add-todo" method="GET">
+                         <button type="submit" class="btn btn-success mr-3">Add ToDo</button>
+
+                         <div class="form-check">
+                             <input class="form-check-input" type="checkbox" name="addLoggedUser" id="defaultCheck1" checked>
+                             <label class="form-check-label" for="defaultCheck1">
+                                 Add with Logged User
+                             </label>
+                         </div>
+                     </form>
 
 
       </div>

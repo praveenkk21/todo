@@ -1,5 +1,6 @@
 package com.praveen.todoApp.todo;
 
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -8,6 +9,8 @@ import java.util.Date;
 
 public class Todo {
     private int id;
+
+    @NotEmpty(message = "Username is required")
     private String username;
     @Size(min=10, message = "Please enter the min 10 characters")
     private String course;
