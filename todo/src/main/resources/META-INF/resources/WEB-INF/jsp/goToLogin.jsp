@@ -1,9 +1,9 @@
+<%@ include file="common/header.jspf"%>
 
-<html>
-    <head>
-        <title>Login-ToDo</title>
-    </head>
+<%@ include file="common/navigation.jspf"%>
+
     <body>
+    <%@ include file="common/navigation.jspf" %>
     <div class="container">
         <h1>Click here to go to the login page</h1>
         <hr>
@@ -12,4 +12,4 @@
         </form>
     </div>
     </body>
-</html>
+<%@ include file="common/footer.jspf" %>
