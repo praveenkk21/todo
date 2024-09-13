@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-@Controller
+//@Controller
 @SessionAttributes("username")
 public class LoginController {
 
@@ -39,5 +39,10 @@ public class LoginController {
         }
       map.put("errorMessage","Invalid Credentials");
         return "loginPage";
+    }
+
+    @RequestMapping("home-page")
+    public String homePage() {
+        return "welcomePage";
     }
 }

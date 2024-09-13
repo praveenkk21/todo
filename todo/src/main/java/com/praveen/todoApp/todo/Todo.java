@@ -1,5 +1,8 @@
 package com.praveen.todoApp.todo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -7,7 +10,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
+@Entity
 public class Todo {
+    public Todo() {
+
+    }
+    @Id
+    @GeneratedValue
     private int id;
 
     @NotEmpty(message = "Username is required")
@@ -19,6 +28,7 @@ public class Todo {
     private boolean done;
 
     public Todo(int id, String username, String course, LocalDate date, boolean done) {
+        super();
         this.id = id;
         this.course = course;
         this.username = username;
