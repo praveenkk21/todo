@@ -3,14 +3,12 @@ package com.praveen.todoApp.todo;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service
-public class TodoService {
+public class TodoService_ {
     private static List<Todo> todos=new ArrayList<>();
     private static int count=0;
 

@@ -3,7 +3,6 @@ package com.praveen.todoApp.todo;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -15,9 +14,9 @@ import java.util.List;
 
 //@Controller
 @SessionAttributes("username")
-public class TodoController {
+public class TodoController_ {
     @Autowired
-    public TodoService todoService;
+    public TodoService_ todoService;
 
     @RequestMapping("list-todos")
     public String listAlltodos(ModelMap mode) {
